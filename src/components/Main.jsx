@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import dummyContacts from '../dummyData';
+import ContactList from './ContactList';
 
 const Main = () => {
   const [contacts, setContacts] = useState(dummyContacts);
@@ -8,7 +9,10 @@ const Main = () => {
       <div id="navbar">
         <div>Contact List</div>
       </div>
-      <div id="container">{/* your components here */}</div>
+      <div id="container">
+        
+      <ContactList contacts={contacts} />
+        </div>
     </div>
   );
 };
